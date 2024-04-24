@@ -1,0 +1,60 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #172333; /* Dark blue background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.text {
+  color: #85a3ca;
+  font-weight: 60;
+  font-size: medium;
+  font-family: "Source Code Pro Thin", monospace;
+}
+.login-box {
+  background-color: #263a4e; /* Lighter dark blue */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  width: 20%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 60%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff; /* White text */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.login {
+  /* Style the container for Google Sign-in button */
+  text-align: center;
+  margin-top: 20px; /* Adjust spacing between form and button */
+}
+
+.g_id_signin {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* padding-bottom: 30%; */
+}
