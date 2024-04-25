@@ -12,6 +12,7 @@ import { ErrorComponent } from './error/error.component';
 
 import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { AdminDboardComponent } from './admin-dboard/admin-dboard.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 
     HeaderComponent,
     SideNavComponent,
+    AdminDboardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration()],

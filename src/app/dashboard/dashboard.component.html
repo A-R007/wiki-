@@ -1,31 +1,37 @@
-
-  <div class="container-fluid g-0">
-    <app-root></app-root>
-    <app-header (sideNavToggled)="sideNavStatus = $event"></app-header>
-    <main>
-      <app-side-nav
+<div class="container-fluid g-0">
+  <app-root></app-root>
+  <app-header (sideNavToggled)="sideNavStatus = $event"></app-header>
+  <main>
+    <app-side-nav
       [sideNavStatus]="sideNavStatus"
       [ngClass]="{ 'app-side-nav-open': sideNavStatus }"
-      ></app-side-nav>
-      <div
+    ></app-side-nav>
+    <div
       class="display-area p-3"
       [ngClass]="{ 'display-area-shrink': sideNavStatus }"
-      >
-      <div
-      class="file-drag-drop"
-      (dragover)="onDragOver($event)"
-      (dragleave)="onDragLeave($event)"
-      (drop)="onFileDropped($event)"
-      >
-      <span *ngIf="!hasDroppedFile">
-        Drag and drop your PDF file here
-      </span>
+    >
+      <div class="upload-container">
+        <div
+          class="file-drag-drop"
+          (dragover)="onDragOver($event)"
+          (dragleave)="onDragLeave($event)"
+          (drop)="onFileDropped($event)"
+        >
+          <!-- (fileUploaded)="uploadFile(file)" -->
+          <span *ngIf="!hasDroppedFile">
+            Drag and drop your PDF file here
+          </span>
           <span *ngIf="hasDroppedFile">
             File dropped: {{ hasDroppedFile }}
           </span>
         </div>
+        <br />
+        <div class="block-button">
+          <button class="upload-button p-2">Upload</button>
+        </div>
       </div>
-      <br />
-      <div></div>
-    </main>
-  </div>
+    </div>
+    <br />
+    <div></div>
+  </main>
+</div>

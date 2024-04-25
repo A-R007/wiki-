@@ -9,10 +9,10 @@ export class DashboardComponent {
   sideNavStatus: boolean = false;
   @Output() fileUploaded = new EventEmitter<File>();
 
-  // uploadFile(file: File) {
-  //   // Implement logic to upload the file to your server using HTTP or other methods
-  //   console.log('File uploaded:', file); // Example: Log the file details
-  // }
+  uploadFile(file: File) {
+    // Implement logic to upload the file to your server using HTTP or other methods
+    console.log('File uploaded:', file); // Example: Log the file details
+  }
 
   hasDroppedFile = false;
   droppedFile: File | null = null;
