@@ -8,10 +8,13 @@ import { Component, Output, Input, EventEmitter } from '@angular/core';
 export class DashboardComponent {
   sideNavStatus: boolean = false;
   @Output() fileUploaded = new EventEmitter<File>();
+  file: any;
+  name: string = '';
 
-  uploadFile(file: File) {
+  uploadFile(event: any) {
+    this.file = event.target.files[0];
     // Implement logic to upload the file to your server using HTTP or other methods
-    console.log('File uploaded:', file); // Example: Log the file details
+    console.log('File uploaded:', this.file); // Example: Log the file details
   }
 
   hasDroppedFile = false;

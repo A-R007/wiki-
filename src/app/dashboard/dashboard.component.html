@@ -16,6 +16,7 @@
           (dragover)="onDragOver($event)"
           (dragleave)="onDragLeave($event)"
           (drop)="onFileDropped($event)"
+          (fileUploaded)="uploadFile($event)"
         >
           <!-- (fileUploaded)="uploadFile(file)" -->
           <span *ngIf="!hasDroppedFile">

@@ -1,0 +1,23 @@
+<div class="container-fluid g-0">
+  <app-root></app-root>
+  <app-header (sideNavToggled)="sideNavStatus = $event"></app-header>
+  <main>
+    <app-side-nav
+      [sideNavStatus]="sideNavStatus"
+      [ngClass]="{ 'app-side-nav-open': sideNavStatus }"
+    ></app-side-nav>
+    <div
+      class="display-area p-3"
+      [ngClass]="{ 'display-area-shrink': sideNavStatus }"
+    >
+      <div class="upload-container">
+        <br />
+        <div class="block-button">
+          <!-- <button class="upload-button p-2">Upload</button> -->
+        </div>
+      </div>
+    </div>
+    <br />
+    <div></div>
+  </main>
+</div>
